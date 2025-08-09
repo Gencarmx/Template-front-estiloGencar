@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Sidebar fijo izquierdo: solo iconos -->
+    
     <div class="bg-[#0F090C] w-20 h-screen p-4 flex flex-col items-center gap-6 fixed top-0 left-0 z-20">
       <img src="../assets/img/logoUnico.png" />
       <div v-for="(menu, index) in menus" :key="index"
@@ -18,7 +18,7 @@
       </button>
     </div>
 
-    <!-- Panel derecho: se abre/cierra -->
+    
     <transition name="slide-fade">
       <div v-if="panelOpen" class="bg-[#323C49] w-80 h-screen p-6 flex flex-col fixed top-0 left-20 z-10">
         <button @click="togglePanel"
@@ -84,8 +84,8 @@ import {
 } from "lucide-vue-next";
 import { ref } from "vue";
 
-const panelOpen = ref(true);     // Panel abierto por defecto
-const selectedMenu = ref(0);     // Botón "Perfil" seleccionado por defecto
+const panelOpen = ref(true);     
+const selectedMenu = ref(0);     
 
 const menus = [
   { title: "Perfil", icon: LucideLayoutDashboard },
